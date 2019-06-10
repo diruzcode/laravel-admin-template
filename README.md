@@ -6,6 +6,8 @@ Siempre es un problema el no tener por donde comenzar hay tantos paneles de admi
 
 Este admin panel esta hecho para facilitar la vida a quienes quieran comenzar con el hermoso framework de laravel :heart: usando como base de front lo que nos entregan en https://startbootstrap.com/themes/sb-admin-2/ Se mantendra actualizado con la ultima versión de laravel y contendra ejemplo de usos de variadas librerias.
 
+![N|Solid](https://i.ibb.co/5jGF2jS/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-45.png)![N|Solid](https://i.ibb.co/VD2zq4b/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-34.png)
+
 El panel de administración cuenta con lo siguiente :
 
 
