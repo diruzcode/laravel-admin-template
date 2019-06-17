@@ -8,23 +8,22 @@ use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use App\User;
 use Auth;
-
 use Illuminate\Http\Request;
+use App\Exports\UserCollectionExport;
+use App\Exports\UserQueryExport;
+use App\Exports\UserViewExport;
+use App\Exports\UserMappingExport;
+
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index(Request $request)
     {
         $this->authorize('listar-usuarios');
 
         $users = User::query();
 
-        // Only super-administrador users can see hidden users
         if (!Auth::user()->hasRole('super-administrador')){
             $users = $users->where('hidden', false);
         }
@@ -35,11 +34,6 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(Request $request)
     {
         $this->authorize('crear-usuarios');
@@ -47,7 +41,6 @@ class UserController extends Controller
         $page = $request->get('page');
         $roles = Role::query();
 
-        // Only super-administrador users can see hidden users
         if (!$request->user()->hasRole('super-administrador')){
             $roles->where('hidden', false);
         }
@@ -62,12 +55,6 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(UserRequest $request)
     {
 
@@ -94,12 +81,6 @@ class UserController extends Controller
     }
 
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Request $request, $id)
     {
         $this->authorize('editar-usuarios');
@@ -122,13 +103,6 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(UserRequest $request, $id)
     {
 
@@ -143,7 +117,6 @@ class UserController extends Controller
             $request->except('password', 'password_confirmation')
         ));
 
-        // Verifico si vino el password de ser distinto de vacio lo actualizo.
         if (strlen(trim($request->get('password'))) > 0){
             $user->password = $request->get('password');
             $user->save();
@@ -157,12 +130,6 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Request $request, $id)
     {
         $this->authorize('eliminar-usuarios');
@@ -177,13 +144,6 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Metodo que permite alternar el estado de un usuario.
-     *
-     * @param Request $request
-     * @param $id
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function toggleAccess(Request $request, $id)
     {
 
@@ -197,6 +157,31 @@ class UserController extends Controller
         ]);
 
 
+    }
+
+
+    public function export(Request $request)
+    {
+
+      $type = $request->get('type');
+
+      switch ($type) {
+        case 'collection':
+            return (new UserCollectionExport)->download('UserCollectionExport.xlsx');
+          break;
+        case 'query':
+            return (new UserQueryExport)->download('UserQueryExport.xlsx');
+          break;
+        case 'view':
+            return (new UserViewExport)->download('UserViewExport.xlsx');
+          break;
+        case 'mapping':
+            return (new UserMappingExport)->download('UserMappingExport.xlsx');
+          break;
+        default:
+          return (new UserViewExport)->download('UserViewExport.xlsx');
+          break;
+      }
     }
 
 }
