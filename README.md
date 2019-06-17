@@ -6,7 +6,7 @@ Siempre es un problema el no tener por donde comenzar hay tantos paneles de admi
 
 Este admin panel esta hecho para facilitar la vida a quienes quieran comenzar con el hermoso framework de laravel :heart: usando como base de front lo que nos entregan en https://startbootstrap.com/themes/sb-admin-2/ Se mantendra actualizado con la ultima versión de laravel y contendra ejemplo de usos de variadas librerias.
 
-![N|Solid](https://i.ibb.co/5jGF2jS/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-45.png)![N|Solid](https://i.ibb.co/VD2zq4b/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-34.png)
+![N|Solid](https://i.ibb.co/5jGF2jS/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-45.png)![N|Solid](https://i.ibb.co/VD2zq4b/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-34.png)![N|Solid](https://i.ibb.co/6rryTsX/Captura-de-Pantalla-2019-06-17-a-la-s-00-05-50.png)
 
 El panel de administración cuenta con lo siguiente :
 
@@ -19,6 +19,7 @@ El panel de administración cuenta con lo siguiente :
 | ------ | ------ |
 | Permisos y Roles - laravel-permission | [GitHub](https://github.com/spatie/laravel-permission) |
 | Validación de formularios - laravel-jsvalidation | [GitHub](https://github.com/proengsoft/laravel-jsvalidation)
+| Exportación de Excel - laravel-excel | [GitHub](https://github.com/maatwebsite/Laravel-Excel)
 
 
 ### Package NPM
