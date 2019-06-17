@@ -54,8 +54,8 @@ PHP 7.2 >
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ git clone https://github.com/DiruzCode/laravel-admin
-$ cd laravel-admin
+$ git clone https://github.com/DiruzCode/laravel-admin-template.git
+$ cd laravel-admin-template
 $ npm install
 $ composer install
 ```
