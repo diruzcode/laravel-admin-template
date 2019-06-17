@@ -33,6 +33,7 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard', 'as' => 'dash
 
     Route::resource('/users', 'UserController', ['except' => ['show']]);
     Route::get('/users/{user}/access', 'UserController@toggleAccess')->name('users.toggleAccess');
+    Route::get('/users/export', 'UserController@export')->name('users.export');
 
     Route::resource('/roles', 'RoleController', ['except' => ['show']]);
     Route::resource('/permissions', 'PermissionController', ['except' => ['show']]);

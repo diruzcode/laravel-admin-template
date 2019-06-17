@@ -78,6 +78,48 @@
       @endif
     </div>
   </div>
+  <div class="card-header py-3">
+    <div class="row col-12">
+      <div class="col-6">
+        <h6 class="m-0 font-weight-bold text-primary btn-icon-split align-bottom">Exportaciones en excel</h6>
+      </div>
+    </div>
+    <div class="row col-12">
+        <div class="col-4"></div>
+        <div class="col-2">
+          <a href="{{ route('dashboard::users.export', [ 'type' => 'mapping' ]) }}" target="_blank" class="btn btn-success btn-icon-split float-right">
+            <span class="icon text-white-50">
+              <i class="fas fa-download"></i>
+            </span>
+            <span class="text">Mapping <i class="fas fa-file-excel"></i></span>
+          </a>
+        </div>
+        <div class="col-2">
+          <a href="{{ route('dashboard::users.export', [ 'type' => 'query' ]) }}" target="_blank" class="btn btn-success btn-icon-split float-right">
+            <span class="icon text-white-50">
+              <i class="fas fa-download"></i>
+            </span>
+            <span class="text">Query <i class="fas fa-file-excel"></i></span>
+          </a>
+        </div>
+        <div class="col-2">
+          <a href="{{ route('dashboard::users.export', [ 'type' => 'view' ]) }}" target="_blank" class="btn btn-success btn-icon-split float-right">
+            <span class="icon text-white-50">
+              <i class="fas fa-download"></i>
+            </span>
+            <span class="text">View <i class="fas fa-file-excel"></i></span>
+          </a>
+        </div>
+        <div class="col-2">
+          <a href="{{ route('dashboard::users.export', [ 'type' => 'collection' ]) }}" target="_blank" class="btn btn-success btn-icon-split float-right">
+            <span class="icon text-white-50">
+              <i class="fas fa-download"></i>
+            </span>
+            <span class="text">Collection <i class="fas fa-file-excel"></i></span>
+          </a>
+        </div>
+    </div>
+  </div>
 </div>
 
 @stop
