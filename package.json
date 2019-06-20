@@ -10,20 +10,22 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "axios": "^0.18",
+        "axios": "^0.18.1",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.2.0",
         "jquery": "^3.2",
-        "laravel-mix": "^4.0.7",
+        "laravel-mix": "^4.0.16",
         "lodash": "^4.17.5",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
-        "sass": "^1.20.1",
+        "sass": "^1.21.0",
         "sass-loader": "^7.1.0",
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.8.2",
+        "@ckeditor/ckeditor5-build-classic": "^12.2.0",
+        "@ckeditor/ckeditor5-build-decoupled-document": "^12.2.0",
+        "@fortawesome/fontawesome-free": "^5.9.0",
         "datatables.net": "^1.10.12",
         "datatables.net-bs": "^1.10.12",
         "datatables.net-responsive": "^2.1.0",
@@ -32,7 +34,7 @@
         "moment": "^2.24.0",
         "select2": "^4.0.6-rc.1",
         "select2-bootstrap-theme": "0.1.0-beta.10",
-        "switchery": "0.0.2",
-        "sweetalert2": "^8.11.6"
+        "sweetalert2": "^8.12.2",
+        "switchery": "0.0.2"
     }
 }

@@ -6,7 +6,7 @@ Siempre es un problema el no tener por donde comenzar hay tantos paneles de admi
 
 Este admin panel esta hecho para facilitar la vida a quienes quieran comenzar con el hermoso framework de laravel :heart: usando como base de front lo que nos entregan en https://startbootstrap.com/themes/sb-admin-2/ Se mantendra actualizado con la ultima versión de laravel y contendra ejemplo de usos de variadas librerias.
 
-![N|Solid](https://i.ibb.co/5jGF2jS/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-45.png)![N|Solid](https://i.ibb.co/VD2zq4b/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-34.png)![N|Solid](https://i.ibb.co/6rryTsX/Captura-de-Pantalla-2019-06-17-a-la-s-00-05-50.png)
+![N|Solid](https://i.ibb.co/5jGF2jS/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-45.png)![N|Solid](https://i.ibb.co/VD2zq4b/Captura-de-Pantalla-2019-06-10-a-la-s-12-53-34.png)![N|Solid](https://i.ibb.co/6rryTsX/Captura-de-Pantalla-2019-06-17-a-la-s-00-05-50.png)![N|Solid](https://i.ibb.co/x8Njhr5/screencapture-127-0-0-1-8000-dashboard-pdfs-2019-06-20-12-32-46.png)
 
 El panel de administración cuenta con lo siguiente :
 
@@ -20,7 +20,18 @@ El panel de administración cuenta con lo siguiente :
 | Permisos y Roles - laravel-permission | [GitHub](https://github.com/spatie/laravel-permission) |
 | Validación de formularios - laravel-jsvalidation | [GitHub](https://github.com/proengsoft/laravel-jsvalidation)
 | Exportación de Excel - laravel-excel | [GitHub](https://github.com/maatwebsite/Laravel-Excel)
+| Exportación de pdf - laravel-snappy | [GitHub](https://github.com/barryvdh/laravel-snappy)
 
+
+OJO con este package, es necesario instalar un binario en tu maquina, que puedes descargar aqui https://wkhtmltopdf.org/downloads.html
+
+Cuando sea instalado en tu maquina debes configurar en config/snappy.php la direccion del binario
+
+
+
+```sh
+'binary'  => '/usr/local/bin/wkhtmltopdf-amd64',
+```
 
 ### Package NPM
 
@@ -39,6 +50,7 @@ El panel de administración cuenta con lo siguiente :
 | select2-bootstrap-theme | [Package](https://www.npmjs.com/package/select2-bootstrap-theme)
 | switchery | [Package](https://www.npmjs.com/package/switchery)
 | sweetalert2 | [Package](https://www.npmjs.com/package/sweetalert2)
+| @ckeditor/ckeditor5-build-decoupled-document | [Package](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-decoupled-document)
 
 
 
@@ -47,8 +59,11 @@ El panel de administración cuenta con lo siguiente :
 Requisitos previos  :
 
 PHP 7.2 >
+
 [Laravel](https://laravel.com/)
+
 [NodeJs o NPM](https://nodejs.org/es/)
+
 [Composer](https://getcomposer.org/)
 
 Install the dependencies and devDependencies and start the server.
