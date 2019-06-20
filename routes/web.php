@@ -39,6 +39,11 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard', 'as' => 'dash
     Route::resource('/permissions', 'PermissionController', ['except' => ['show']]);
     Route::get('/common/slug/{name}', 'CommonController@slug')->name('common.slug');
 
+    Route::get('/pdfs', 'PdfController@index')->name('pdfs.index');
+    Route::post('/pdfs/generate', 'PdfController@export_document_generate')->name('pdfs.export_document_generate');
+    Route::post('/pdfs/url', 'PdfController@export_document_url')->name('pdfs.export_document_url');
+    Route::get('/pdfs/view', 'PdfController@export_by_view')->name('pdfs.export_by_view');
+
 
   });
 

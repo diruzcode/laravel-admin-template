@@ -39,6 +39,19 @@
     </div>
   </li>
 
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities2" aria-expanded="true" aria-controls="collapseUtilities2">
+      <i class="fas fa-fw fa-wrench"></i>
+      <span>Otro</span>
+    </a>
+    <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item" href="{{ route('dashboard::pdfs.index') }}">Exportaciones a pdf</a>
+      </div>
+    </div>
+  </li>
+
+
 
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">

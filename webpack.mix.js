@@ -25,7 +25,8 @@ mix.js('resources/js/dashboard/app.js', 'public/js/dashboard.js')
          'node_modules/daterangepicker/daterangepicker.js',
          './vendor/proengsoft/laravel-jsvalidation/public/js/jsvalidation.js',
          'node_modules/switchery/standalone/switchery.js',
-         'node_modules/sweetalert2/dist/sweetalert2.min.js'
+         'node_modules/sweetalert2/dist/sweetalert2.min.js',
+         'node_modules/@ckeditor/ckeditor5-build-decoupled-document/build/ckeditor.js',
    ], 'public/js/dashboard_resources.js')
 
    .combine([
@@ -35,7 +36,7 @@ mix.js('resources/js/dashboard/app.js', 'public/js/dashboard.js')
          'node_modules/select2-bootstrap-theme/dist/select2-bootstrap.min.css',
          'node_modules/daterangepicker/daterangepicker.css',
          'node_modules/switchery/standalone/switchery.css',
-         'node_modules/sweetalert2/dist/sweetalert2.min.css',
+         'node_modules/sweetalert2/dist/sweetalert2.min.css'
    ], 'public/css/dashboard_resources.css')
 
    .copyDirectory('resources/img', 'public/img')
