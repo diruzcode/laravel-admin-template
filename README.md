@@ -109,3 +109,8 @@ Por defecto correra en la siguiente ip
 ### Desarrolladores
 
 Quieren contribuir? Genial! son libres de hacerlo :D
+
+
+## Licencia
+
+Este panel de administrador en Laravel framework es de codigo abierto bajo la licencia [MIT license](https://opensource.org/licenses/MIT).
